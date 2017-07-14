@@ -17,19 +17,20 @@
             android:id="@+id/txtAccountName"
             android:paddingLeft="5dp"
             android:paddingBottom="2dp"
-            android:paddingTop="5dp"
+            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#009657" />
+            android:textColor="#009657"
+            android:textSize="20dp" />
         <TextView
             android:text="Note"
             android:id="@+id/txtAccountNote"
             android:paddingLeft="5dp"
-            android:paddingBottom="5dp"
+            android:paddingBottom="10dp"
             android:paddingTop="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="10dp"
+            android:textSize="14dp"
             android:textStyle="italic" />
     </LinearLayout>
     <TextView
@@ -38,8 +39,9 @@
         android:layout_weight="5"
         android:id="@+id/txtAccountBalance"
         android:paddingLeft="5dp"
-        android:paddingBottom="15dp"
-        android:paddingTop="15dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
         android:layout_gravity="right"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20dp" />
 </LinearLayout>
