@@ -29,6 +29,11 @@ namespace Transact
             EditText type_toaccount = FindViewById<EditText>(Resource.Id.txtType_ToAccount);
             EditText notes = FindViewById<EditText>(Resource.Id.txtNotes);
 
+            AutoCompleteTextView test = FindViewById<AutoCompleteTextView>(Resource.Id.autoCompleteTextView1);
+            var categories = new string[] { "ATM", "Auto Maintenance" };
+            ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, categories);
+            test.Adapter = adapter;
+
             insertButton.Click += delegate {
                 enterTransaction(1, date, title, amount, category, type_toaccount, notes);
                 this.Finish();

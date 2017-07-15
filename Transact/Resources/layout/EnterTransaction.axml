@@ -66,4 +66,8 @@
             android:layout_width="match_parent"
             android:layout_weight="50" />
     </LinearLayout>
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/autoCompleteTextView1" />
 </LinearLayout>

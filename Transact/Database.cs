@@ -162,9 +162,7 @@ namespace Transact
 
         public async Task<bool> addAccount(string name, string note, string type, decimal amount, DateTime date, string category, string type_toaccount, string notes)
         {
-            createDatabase();
-            createAccountTable();
-            createTransactionTable();
+            initializeDatabase();
             Console.WriteLine("Start: AddAccount");
 
             // create a connection string for the database
