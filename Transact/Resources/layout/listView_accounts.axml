@@ -20,17 +20,16 @@
             android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#009657"
-            android:textSize="20dp" />
+            android:textSize="18dp"
+            android:textStyle="bold" />
         <TextView
             android:text="Note"
             android:id="@+id/txtAccountNote"
             android:paddingLeft="5dp"
-            android:paddingBottom="10dp"
             android:paddingTop="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14dp"
+            android:textSize="12dp"
             android:textStyle="italic" />
     </LinearLayout>
     <TextView
@@ -39,9 +38,10 @@
         android:layout_weight="5"
         android:id="@+id/txtAccountBalance"
         android:paddingLeft="5dp"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:layout_gravity="right"
         android:layout_height="wrap_content"
-        android:textSize="20dp" />
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingBottom="40dp" />
 </LinearLayout>

@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace Transact
 {
@@ -48,6 +49,14 @@ namespace Transact
             txtAccountNote.Text = mItems[position].Note;
 
             TextView txtAccountTotal = row.FindViewById<TextView>(Resource.Id.txtAccountBalance);
+            if(mItems[position].Balance > 0)
+            {
+                txtAccountTotal.SetTextColor(Color.ParseColor("#046032"));
+            }
+            else
+            {
+                txtAccountTotal.SetTextColor(Color.ParseColor("#c64541"));
+            }
             txtAccountTotal.Text = "$" + mItems[position].Balance;
 
             return row;
