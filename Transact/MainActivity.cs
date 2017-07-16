@@ -26,7 +26,7 @@ namespace Transact
 
             // Get our button from the layout resource and attach an event to it
             lstAccounts = FindViewById<ListView>(Resource.Id.lstAccounts);
-            Button addTransaction = FindViewById<Button>(Resource.Id.addTransaction);
+            Button btnBillReminder = FindViewById<Button>(Resource.Id.btnBillReminder);
             Button readButton = FindViewById<Button>(Resource.Id.btnReadRecords);
             Button btnAddAccount = FindViewById<Button>(Resource.Id.btnAddAccount);
 
@@ -42,12 +42,8 @@ namespace Transact
             lstAccounts.ItemClick += LstAccounts_ItemClick;
             lstAccounts.ItemLongClick += LstAccounts_ItemLongClick;
 
-            addTransaction.Click += delegate
-            {
-                var intent = new Intent(this, typeof(EnterTransaction));
-                //intent.PutExtra("db_class", db);
-                //intent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
-                StartActivity(intent);
+            btnBillReminder.Click += delegate {
+                Toast.MakeText(this, "Bill Reminder in future", ToastLength.Short).Show();
             };
 
             readButton.Click += async delegate { await db.readTransactionRecords(1); };
@@ -62,16 +58,15 @@ namespace Transact
 
         private void LstAccounts_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            makeToast(accounts[e.Position].Name + " was clicked!");
+            //makeToast(accounts[e.Position].Name + " was clicked!");
+            var intent = new Intent(this, typeof(Transactions));
+            intent.PutExtra("AccountPK", accounts[e.Position].PK);
+			StartActivity(intent);
         }
 
         private void LstAccounts_ItemLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
         {
-            makeToast(accounts[e.Position].Name + " was long clicked!");
-        }
-
-        public void makeToast(String message){
-            Toast.MakeText(this, message, ToastLength.Short).Show();
+            Toast.MakeText(this, accounts[e.Position].Name + " was long clicked!", ToastLength.Short).Show();
         }
     }
 }

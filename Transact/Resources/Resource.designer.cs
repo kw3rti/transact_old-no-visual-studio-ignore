@@ -2261,9 +2261,6 @@ namespace Transact
 			// aapt resource value: 0x7f08003d
 			public const int activity_chooser_view_content = 2131230781;
 			
-			// aapt resource value: 0x7f08008a
-			public const int addTransaction = 2131230858;
-			
 			// aapt resource value: 0x7f080049
 			public const int alertTitle = 2131230793;
 			
@@ -2290,6 +2287,12 @@ namespace Transact
 			
 			// aapt resource value: 0x7f080082
 			public const int btnAddTransaction = 2131230850;
+			
+			// aapt resource value: 0x7f0800b4
+			public const int btnAddTransaction1 = 2131230900;
+			
+			// aapt resource value: 0x7f08008a
+			public const int btnBillReminder = 2131230858;
 			
 			// aapt resource value: 0x7f080081
 			public const int btnCancelTransaction = 2131230849;
@@ -2443,6 +2446,9 @@ namespace Transact
 			
 			// aapt resource value: 0x7f080089
 			public const int lstAccounts = 2131230857;
+			
+			// aapt resource value: 0x7f0800b3
+			public const int lstTransactions = 2131230899;
 			
 			// aapt resource value: 0x7f0800a9
 			public const int media_actions = 2131230889;
@@ -3005,6 +3011,9 @@ namespace Transact
 			// aapt resource value: 0x7f04003b
 			public const int support_simple_spinner_dropdown_item = 2130968635;
 			
+			// aapt resource value: 0x7f04003c
+			public const int Transactions = 2130968636;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -3091,11 +3100,8 @@ namespace Transact
 			// aapt resource value: 0x7f090021
 			public const int abc_toolbar_collapse_description = 2131296289;
 			
-			// aapt resource value: 0x7f09002b
-			public const int addTransaction = 2131296299;
-			
-			// aapt resource value: 0x7f09003a
-			public const int add_account = 2131296314;
+			// aapt resource value: 0x7f09003b
+			public const int add_account = 2131296315;
 			
 			// aapt resource value: 0x7f090026
 			public const int app_name = 2131296294;
@@ -3106,20 +3112,26 @@ namespace Transact
 			// aapt resource value: 0x7f090024
 			public const int bottom_sheet_behavior = 2131296292;
 			
-			// aapt resource value: 0x7f090034
-			public const int btnAccountAdd = 2131296308;
-			
 			// aapt resource value: 0x7f090035
-			public const int btnAccountCancel = 2131296309;
+			public const int btnAccountAdd = 2131296309;
+			
+			// aapt resource value: 0x7f090036
+			public const int btnAccountCancel = 2131296310;
+			
+			// aapt resource value: 0x7f09002a
+			public const int btnAddTransaction1 = 2131296298;
+			
+			// aapt resource value: 0x7f09002c
+			public const int btnBillReminder = 2131296300;
 			
 			// aapt resource value: 0x7f090029
 			public const int btn_addTransaction = 2131296297;
 			
-			// aapt resource value: 0x7f090033
-			public const int btn_add_account = 2131296307;
+			// aapt resource value: 0x7f090034
+			public const int btn_add_account = 2131296308;
 			
-			// aapt resource value: 0x7f090032
-			public const int btn_cancelTransaction = 2131296306;
+			// aapt resource value: 0x7f090033
+			public const int btn_cancelTransaction = 2131296307;
 			
 			// aapt resource value: 0x7f090025
 			public const int character_counter_pattern = 2131296293;
@@ -3130,35 +3142,35 @@ namespace Transact
 			// aapt resource value: 0x7f090027
 			public const int enter_activity = 2131296295;
 			
-			// aapt resource value: 0x7f090036
-			public const int hint_account_name = 2131296310;
-			
 			// aapt resource value: 0x7f090037
-			public const int hint_account_note = 2131296311;
+			public const int hint_account_name = 2131296311;
 			
 			// aapt resource value: 0x7f090038
-			public const int hint_account_start_balance = 2131296312;
+			public const int hint_account_note = 2131296312;
 			
 			// aapt resource value: 0x7f090039
-			public const int hint_account_type = 2131296313;
+			public const int hint_account_start_balance = 2131296313;
 			
-			// aapt resource value: 0x7f09002d
-			public const int hint_amount = 2131296301;
-			
-			// aapt resource value: 0x7f09002f
-			public const int hint_category = 2131296303;
+			// aapt resource value: 0x7f09003a
+			public const int hint_account_type = 2131296314;
 			
 			// aapt resource value: 0x7f09002e
-			public const int hint_date = 2131296302;
-			
-			// aapt resource value: 0x7f09002c
-			public const int hint_item = 2131296300;
-			
-			// aapt resource value: 0x7f090031
-			public const int hint_notes = 2131296305;
+			public const int hint_amount = 2131296302;
 			
 			// aapt resource value: 0x7f090030
-			public const int hint_type_toaccount = 2131296304;
+			public const int hint_category = 2131296304;
+			
+			// aapt resource value: 0x7f09002f
+			public const int hint_date = 2131296303;
+			
+			// aapt resource value: 0x7f09002d
+			public const int hint_item = 2131296301;
+			
+			// aapt resource value: 0x7f090032
+			public const int hint_notes = 2131296306;
+			
+			// aapt resource value: 0x7f090031
+			public const int hint_type_toaccount = 2131296305;
 			
 			// aapt resource value: 0x7f090000
 			public const int mr_button_content_description = 2131296256;
@@ -3205,8 +3217,8 @@ namespace Transact
 			// aapt resource value: 0x7f09000e
 			public const int mr_user_route_category_name = 2131296270;
 			
-			// aapt resource value: 0x7f09002a
-			public const int read_button = 2131296298;
+			// aapt resource value: 0x7f09002b
+			public const int read_button = 2131296299;
 			
 			// aapt resource value: 0x7f090022
 			public const int status_bar_notification_info_overflow = 2131296290;

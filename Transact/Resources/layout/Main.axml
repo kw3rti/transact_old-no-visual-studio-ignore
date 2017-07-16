@@ -18,8 +18,8 @@
         android:id="@+id/linearLayout1"
         android:weightSum="99">
         <Button
-            android:text="@string/addTransaction"
-            android:id="@+id/addTransaction"
+            android:text="@string/btnBillReminder"
+            android:id="@+id/btnBillReminder"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_weight="33" />

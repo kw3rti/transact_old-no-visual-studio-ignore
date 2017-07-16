@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Widget;
 
@@ -15,7 +16,7 @@ namespace Transact
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.EnterTransaction);
 
-			//Intent passedIntent = getIntent();
+            var accountPK = Intent.GetIntExtra("AccountPK",0);
 			//Database db = (Database)passedIntent.getSerializableExtra("db_class");
 
             // Get our button from the layout resource and attach an event to it
@@ -35,7 +36,7 @@ namespace Transact
             test.Adapter = adapter;
 
             insertButton.Click += delegate {
-                enterTransaction(1, date, title, amount, category, type_toaccount, notes);
+                enterTransaction(accountPK, date, title, amount, category, type_toaccount, notes);
                 this.Finish();
             };
             cancelButton.Click += delegate { this.Finish(); };

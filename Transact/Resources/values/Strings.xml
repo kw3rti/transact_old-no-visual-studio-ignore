@@ -4,8 +4,9 @@
 	<string name="enter_activity">Enter Transaction</string>
 	<string name="create_button">Initialize Database</string>
 	<string name="btn_addTransaction">Add</string>
+	<string name="btnAddTransaction1">Add Transaction</string>
 	<string name="read_button">Read records</string>
-  <string name="addTransaction">Add Transaction</string>
+  <string name="btnBillReminder">Bill Reminder</string>
 	<string name="hint_item">Item</string>
 	<string name="hint_amount">Amount</string>
 	<string name="hint_date">Date</string>

@@ -2577,7 +2577,6 @@ containing a value of this type.
         public static final int action_mode_bar_stub=0x7f080056;
         public static final int action_mode_close_button=0x7f08003c;
         public static final int activity_chooser_view_content=0x7f08003d;
-        public static final int addTransaction=0x7f08008a;
         public static final int alertTitle=0x7f080049;
         public static final int always=0x7f08001e;
         public static final int autoCompleteTextView1=0x7f080083;
@@ -2587,6 +2586,8 @@ containing a value of this type.
         public static final int btnAccountCancel=0x7f08006e;
         public static final int btnAddAccount=0x7f08008c;
         public static final int btnAddTransaction=0x7f080082;
+        public static final int btnAddTransaction1=0x7f0800b4;
+        public static final int btnBillReminder=0x7f08008a;
         public static final int btnCancelTransaction=0x7f080081;
         public static final int btnReadRecords=0x7f08008b;
         public static final int buttonPanel=0x7f080044;
@@ -2638,6 +2639,7 @@ containing a value of this type.
         public static final int listMode=0x7f08000b;
         public static final int list_item=0x7f080041;
         public static final int lstAccounts=0x7f080089;
+        public static final int lstTransactions=0x7f0800b3;
         public static final int media_actions=0x7f0800a9;
         public static final int middle=0x7f08001d;
         public static final int mini=0x7f080037;
@@ -2818,6 +2820,7 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f040039;
         public static final int select_dialog_singlechoice_material=0x7f04003a;
         public static final int support_simple_spinner_dropdown_item=0x7f04003b;
+        public static final int transactions=0x7f04003c;
     }
     public static final class mipmap {
         public static final int icon=0x7f030000;
@@ -2842,29 +2845,30 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f09001f;
         public static final int abc_shareactionprovider_share_with_application=0x7f090020;
         public static final int abc_toolbar_collapse_description=0x7f090021;
-        public static final int addTransaction=0x7f09002b;
-        public static final int add_account=0x7f09003a;
+        public static final int add_account=0x7f09003b;
         public static final int app_name=0x7f090026;
         public static final int appbar_scrolling_view_behavior=0x7f090023;
         public static final int bottom_sheet_behavior=0x7f090024;
-        public static final int btnAccountAdd=0x7f090034;
-        public static final int btnAccountCancel=0x7f090035;
+        public static final int btnAccountAdd=0x7f090035;
+        public static final int btnAccountCancel=0x7f090036;
+        public static final int btnAddTransaction1=0x7f09002a;
+        public static final int btnBillReminder=0x7f09002c;
         public static final int btn_addTransaction=0x7f090029;
-        public static final int btn_add_account=0x7f090033;
-        public static final int btn_cancelTransaction=0x7f090032;
+        public static final int btn_add_account=0x7f090034;
+        public static final int btn_cancelTransaction=0x7f090033;
         public static final int character_counter_pattern=0x7f090025;
         public static final int create_button=0x7f090028;
         public static final int enter_activity=0x7f090027;
-        public static final int hint_account_name=0x7f090036;
-        public static final int hint_account_note=0x7f090037;
-        public static final int hint_account_start_balance=0x7f090038;
-        public static final int hint_account_type=0x7f090039;
-        public static final int hint_amount=0x7f09002d;
-        public static final int hint_category=0x7f09002f;
-        public static final int hint_date=0x7f09002e;
-        public static final int hint_item=0x7f09002c;
-        public static final int hint_notes=0x7f090031;
-        public static final int hint_type_toaccount=0x7f090030;
+        public static final int hint_account_name=0x7f090037;
+        public static final int hint_account_note=0x7f090038;
+        public static final int hint_account_start_balance=0x7f090039;
+        public static final int hint_account_type=0x7f09003a;
+        public static final int hint_amount=0x7f09002e;
+        public static final int hint_category=0x7f090030;
+        public static final int hint_date=0x7f09002f;
+        public static final int hint_item=0x7f09002d;
+        public static final int hint_notes=0x7f090032;
+        public static final int hint_type_toaccount=0x7f090031;
         public static final int mr_button_content_description=0x7f090000;
         public static final int mr_chooser_searching=0x7f090001;
         public static final int mr_chooser_title=0x7f090002;
@@ -2880,7 +2884,7 @@ containing a value of this type.
         public static final int mr_controller_stop=0x7f09000c;
         public static final int mr_system_route_name=0x7f09000d;
         public static final int mr_user_route_category_name=0x7f09000e;
-        public static final int read_button=0x7f09002a;
+        public static final int read_button=0x7f09002b;
         public static final int status_bar_notification_info_overflow=0x7f090022;
     }
     public static final class style {

@@ -18,6 +18,10 @@ Transact.Database, Transact;md5f101cc39e01f1dee22cf0150bb0a163f.Database
 Transact.Database, Transact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f101cc39e01f1dee22cf0150bb0a163f.Database
 Transact.Database;md5f101cc39e01f1dee22cf0150bb0a163f.Database
 transact.Database;md5f101cc39e01f1dee22cf0150bb0a163f.Database
+Transact.Transactions, Transact;md5f101cc39e01f1dee22cf0150bb0a163f.Transactions
+Transact.Transactions, Transact, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f101cc39e01f1dee22cf0150bb0a163f.Transactions
+Transact.Transactions;md5f101cc39e01f1dee22cf0150bb0a163f.Transactions
+transact.Transactions;md5f101cc39e01f1dee22cf0150bb0a163f.Transactions
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
