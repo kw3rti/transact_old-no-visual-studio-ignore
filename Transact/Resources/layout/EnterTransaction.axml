@@ -12,35 +12,40 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2">
+        android:id="@+id/linearLayout2"
+        android:weightSum="100">
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/txtAmount"
             android:hint="@string/hint_amount"
-            android:layout_width="180dp"
-            android:layout_height="match_parent" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
         <EditText
             android:inputType="date"
             android:id="@+id/txtDate"
             android:hint="@string/hint_date"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50.0dp"
-        android:id="@+id/linearLayout1">
-        <EditText
-            android:id="@+id/txtCategory"
-            android:hint="@string/hint_category"
-            android:layout_width="180dp"
-            android:layout_height="match_parent" />
+        android:id="@+id/linearLayout1"
+        android:weightSum="100">
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
         <EditText
             android:id="@+id/txtType_ToAccount"
             android:hint="@string/hint_type_toaccount"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="50" />
     </LinearLayout>
     <EditText
         android:layout_width="match_parent"
@@ -70,4 +75,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/autoCompleteTextView1" />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerType_ToAccount" />
 </LinearLayout>

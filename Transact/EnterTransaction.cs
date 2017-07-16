@@ -26,14 +26,18 @@ namespace Transact
             EditText title = FindViewById<EditText>(Resource.Id.txtTitle);
             EditText amount = FindViewById<EditText>(Resource.Id.txtAmount);
             EditText date = FindViewById<EditText>(Resource.Id.txtDate);
-            EditText category = FindViewById<EditText>(Resource.Id.txtCategory);
             EditText type_toaccount = FindViewById<EditText>(Resource.Id.txtType_ToAccount);
             EditText notes = FindViewById<EditText>(Resource.Id.txtNotes);
 
-            AutoCompleteTextView test = FindViewById<AutoCompleteTextView>(Resource.Id.autoCompleteTextView1);
-            var categories = new string[] { "ATM", "Auto Maintenance" };
-            ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, categories);
-            test.Adapter = adapter;
+            Spinner category = FindViewById<Spinner>(Resource.Id.spinnerCategory);
+			var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.category_array, Android.Resource.Layout.SimpleSpinnerItem);
+			adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+			category.Adapter = adapter;
+
+            //AutoCompleteTextView test = FindViewById<AutoCompleteTextView>(Resource.Id.autoCompleteTextView1);
+            //var categories = new string[] { "ATM", "Auto Maintenance" };
+            //ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, categories);
+            //test.Adapter = adapter;
 
             insertButton.Click += delegate {
                 enterTransaction(accountPK, date, title, amount, category, type_toaccount, notes);
@@ -42,14 +46,14 @@ namespace Transact
             cancelButton.Click += delegate { this.Finish(); };
         }
 
-        private async void enterTransaction(int accountPK, EditText date, EditText title, EditText amount, EditText category, EditText type_toaccount, EditText notes){
+        private async void enterTransaction(int accountPK, EditText date, EditText title, EditText amount, Spinner category, EditText type_toaccount, EditText notes){
             //do checks to make sure data is entered into form before saving
             if(title.Text != ""){
                 if (amount.Text != ""){
                     if (date.Text != ""){
-                        if(category.Text != ""){
+                        if(category.SelectedItem.ToString() != ""){
                             if(type_toaccount.Text != ""){
-                                await MainActivity.db.addTransaction(accountPK, Convert.ToDateTime(date.Text.ToString()), title.Text, Convert.ToDecimal(amount.Text), category.Text, type_toaccount.Text, notes.Text);                   
+                                await MainActivity.db.addTransaction(accountPK, Convert.ToDateTime(date.Text.ToString()), title.Text, Convert.ToDecimal(amount.Text), category.SelectedItem.ToString(), type_toaccount.Text, notes.Text);                   
                             }
                             else{
                                 type_toaccount.RequestFocus();

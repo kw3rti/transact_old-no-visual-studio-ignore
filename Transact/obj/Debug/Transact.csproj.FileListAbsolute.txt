@@ -78,6 +78,7 @@ C:/Users/kw3rt/Source/Repos/transact/Transact/obj/Debug/android/assets/Xamarin.F
 /Users/phollar/Projects/Transact/bin/Debug/Xamarin.Forms.Xaml.pdb
 /Users/phollar/Projects/Transact/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Users/phollar/Projects/Transact/bin/Debug/Xamarin.Forms.Xaml.xml
+/Users/phollar/Projects/Transact/obj/Debug/Transact.csprojResolveAssemblyReference.cache
 /Users/phollar/Projects/Transact/obj/Debug/Transact.csproj.CoreCompileInputs.cache
 /Users/phollar/Projects/Transact/obj/Debug/Transact.dll
 /Users/phollar/Projects/Transact/obj/Debug/Transact.pdb
@@ -96,4 +97,3 @@ C:/Users/kw3rt/Source/Repos/transact/Transact/obj/Debug/android/assets/Xamarin.F
 /Users/phollar/Projects/Transact/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/phollar/Projects/Transact/obj/Debug/R.cs.flag
 /Users/phollar/Projects/Transact/obj/Debug/uploadflags.txt
-/Users/phollar/Projects/Transact/obj/Debug/Transact.csprojResolveAssemblyReference.cache
