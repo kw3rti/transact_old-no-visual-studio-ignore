@@ -28,6 +28,7 @@ public final class R {
     }
     public static final class array {
         public static int account_array=0x7f0e0000;
+        public static int category_array=0x7f0e0001;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -2582,16 +2583,16 @@ containing a value of this type.
         public static int activity_chooser_view_content=0x7f08003d;
         public static int alertTitle=0x7f080049;
         public static int always=0x7f08001e;
-        public static int autoCompleteTextView1=0x7f080084;
+        public static int autoCompleteTextView1=0x7f080083;
         public static int beginning=0x7f08001b;
         public static int bottom=0x7f08002a;
         public static int btnAccountAdd=0x7f08006f;
         public static int btnAccountCancel=0x7f08006e;
         public static int btnAddAccount=0x7f08008d;
-        public static int btnAddTransaction=0x7f080083;
+        public static int btnAddTransaction=0x7f080082;
         public static int btnAddTransaction1=0x7f0800b5;
         public static int btnBillReminder=0x7f08008b;
-        public static int btnCancelTransaction=0x7f080082;
+        public static int btnCancelTransaction=0x7f080081;
         public static int btnReadRecords=0x7f08008c;
         public static int buttonPanel=0x7f080044;
         public static int cancel_action=0x7f0800a8;
@@ -2608,11 +2609,11 @@ containing a value of this type.
         public static int customPanel=0x7f08004f;
         public static int decor_content_parent=0x7f080058;
         public static int default_activity_button=0x7f080040;
-        public static int design_bottom_sheet=0x7f080072;
-        public static int design_menu_item_action_area=0x7f080079;
-        public static int design_menu_item_action_area_stub=0x7f080078;
-        public static int design_menu_item_text=0x7f080077;
-        public static int design_navigation_view=0x7f080076;
+        public static int design_bottom_sheet=0x7f080071;
+        public static int design_menu_item_action_area=0x7f080078;
+        public static int design_menu_item_action_area_stub=0x7f080077;
+        public static int design_menu_item_text=0x7f080076;
+        public static int design_navigation_view=0x7f080075;
         public static int disableHome=0x7f08000e;
         public static int edit_query=0x7f08005c;
         public static int end=0x7f08001c;
@@ -2637,8 +2638,8 @@ containing a value of this type.
         public static int line1=0x7f0800ac;
         public static int line3=0x7f0800b0;
         public static int linearLayout1=0x7f08006d;
-        public static int linearLayout2=0x7f08007b;
-        public static int linearLayout3=0x7f080081;
+        public static int linearLayout2=0x7f08007a;
+        public static int linearLayout3=0x7f080080;
         public static int listMode=0x7f08000b;
         public static int list_item=0x7f080041;
         public static int lstAccounts=0x7f08008a;
@@ -2671,7 +2672,7 @@ containing a value of this type.
         public static int mr_volume_item_icon=0x7f0800a0;
         public static int mr_volume_slider=0x7f0800a1;
         public static int multiply=0x7f080016;
-        public static int navigation_header_container=0x7f080075;
+        public static int navigation_header_container=0x7f080074;
         public static int never=0x7f080021;
         public static int none=0x7f080010;
         public static int normal=0x7f08000c;
@@ -2703,11 +2704,13 @@ containing a value of this type.
         public static int showCustom=0x7f080011;
         public static int showHome=0x7f080012;
         public static int showTitle=0x7f080013;
-        public static int snackbar_action=0x7f080074;
-        public static int snackbar_text=0x7f080073;
+        public static int snackbar_action=0x7f080073;
+        public static int snackbar_text=0x7f080072;
         public static int snap=0x7f080027;
         public static int spacer=0x7f080045;
-        public static int spinner1=0x7f080070;
+        public static int spinnerAccountType=0x7f08006a;
+        public static int spinnerCategory=0x7f08007d;
+        public static int spinnerType_ToAccount=0x7f080084;
         public static int split_action_bar=0x7f080008;
         public static int src_atop=0x7f080018;
         public static int src_in=0x7f080019;
@@ -2724,22 +2727,20 @@ containing a value of this type.
         public static int title_template=0x7f080048;
         public static int top=0x7f080032;
         public static int topPanel=0x7f080047;
-        public static int touch_outside=0x7f080071;
+        public static int touch_outside=0x7f080070;
         public static int txtAccountBalance=0x7f080085;
         public static int txtAccountName=0x7f080069;
-        public static int txtAccountNote=0x7f08006a;
-        public static int txtAccountStartBalance=0x7f08006b;
-        public static int txtAccountType=0x7f08006c;
-        public static int txtAmount=0x7f08007c;
-        public static int txtCategory=0x7f08007e;
-        public static int txtDate=0x7f08007d;
-        public static int txtNotes=0x7f080080;
-        public static int txtTitle=0x7f08007a;
+        public static int txtAccountNote=0x7f08006b;
+        public static int txtAccountStartBalance=0x7f08006c;
+        public static int txtAmount=0x7f08007b;
+        public static int txtDate=0x7f08007c;
+        public static int txtNotes=0x7f08007f;
+        public static int txtTitle=0x7f080079;
         public static int txtTransactionAmount=0x7f080089;
         public static int txtTransactionCategory=0x7f080088;
         public static int txtTransactionDate=0x7f080086;
         public static int txtTransactionName=0x7f080087;
-        public static int txtType_ToAccount=0x7f08007f;
+        public static int txtType_ToAccount=0x7f08007e;
         public static int up=0x7f080009;
         public static int useLogo=0x7f080014;
         public static int view_offset_helper=0x7f08000a;
