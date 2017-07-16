@@ -49,13 +49,19 @@ namespace Transact
             txtAccountNote.Text = mItems[position].Note;
 
             TextView txtAccountTotal = row.FindViewById<TextView>(Resource.Id.txtAccountBalance);
-            if(mItems[position].Balance > 0)
+
+            //if balanace is 0, text color is black; if balance is greater than 0, text color is green; if balance is less than 0, text color is red
+            if(mItems[position].Balance == 0)
             {
-                txtAccountTotal.SetTextColor(Color.ParseColor("#046032"));
+                txtAccountTotal.SetTextColor(Color.Black);
+            }
+            else if(mItems[position].Balance > 0)
+            {
+                txtAccountTotal.SetTextColor(Color.DarkGreen);
             }
             else
             {
-                txtAccountTotal.SetTextColor(Color.ParseColor("#c64541"));
+                txtAccountTotal.SetTextColor(Color.Red);
             }
             txtAccountTotal.Text = "$" + mItems[position].Balance;
 
