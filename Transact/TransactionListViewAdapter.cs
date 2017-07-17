@@ -42,8 +42,8 @@ namespace Transact
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.listView_accounts, null, false);
             }
 
-            //TextView txtAccountName = row.FindViewById<TextView>(Resource.Id.txtAccountName);
-            //txtAccountName.Text = mItems[position].Name;
+            TextView txtTransactionDate = row.FindViewById<TextView>(Resource.Id.txtTransactionDate);
+            txtTransactionDate.Text = mItems[position].Date.ToString();
 
             //TextView txtAccountNote = row.FindViewById<TextView>(Resource.Id.txtAccountNote);
             //txtAccountNote.Text = mItems[position].Note;
