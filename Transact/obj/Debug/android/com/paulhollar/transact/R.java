@@ -2591,9 +2591,8 @@ containing a value of this type.
         public static final int btnAddAccount=0x7f08008d;
         public static final int btnAddTransaction=0x7f080082;
         public static final int btnAddTransaction1=0x7f0800b5;
-        public static final int btnBillReminder=0x7f08008b;
+        public static final int btnBillReminder=0x7f08008c;
         public static final int btnCancelTransaction=0x7f080081;
-        public static final int btnReadRecords=0x7f08008c;
         public static final int buttonPanel=0x7f080044;
         public static final int cancel_action=0x7f0800a8;
         public static final int center=0x7f08002b;
@@ -2634,6 +2633,7 @@ containing a value of this type.
         public static final int image=0x7f08003f;
         public static final int info=0x7f0800b2;
         public static final int item_touch_helper_previous_elevation=0x7f080000;
+        public static final int layoutMenu1=0x7f08008b;
         public static final int left=0x7f08002f;
         public static final int line1=0x7f0800ac;
         public static final int line3=0x7f0800b0;

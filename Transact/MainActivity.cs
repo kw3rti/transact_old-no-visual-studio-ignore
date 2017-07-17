@@ -15,7 +15,7 @@ namespace Transact
 		public static Database db = new Database();
         public static List<Account> accounts = new List<Account>();
         public static ListView lstAccounts;
-        public static AccountListViewAdapter adapter;
+        public static AccountListViewAdapter accountAdapter;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,7 +27,6 @@ namespace Transact
             // Get our button from the layout resource and attach an event to it
             lstAccounts = FindViewById<ListView>(Resource.Id.lstAccounts);
             Button btnBillReminder = FindViewById<Button>(Resource.Id.btnBillReminder);
-            Button readButton = FindViewById<Button>(Resource.Id.btnReadRecords);
             Button btnAddAccount = FindViewById<Button>(Resource.Id.btnAddAccount);
 
             db = new Database();
@@ -35,8 +34,8 @@ namespace Transact
             //load accounts from the database
             db.readAccounts();
 
-            adapter = new AccountListViewAdapter(this, accounts);
-            lstAccounts.Adapter = adapter;
+            accountAdapter = new AccountListViewAdapter(this, accounts);
+            lstAccounts.Adapter = accountAdapter;
             
             //click events for short and long of the listview for the accounts
             lstAccounts.ItemClick += LstAccounts_ItemClick;
@@ -45,8 +44,6 @@ namespace Transact
             btnBillReminder.Click += delegate {
                 Toast.MakeText(this, "Bill Reminder in future", ToastLength.Short).Show();
             };
-
-            readButton.Click += async delegate { await db.readTransactionRecords(1); };
 
             btnAddAccount.Click += delegate {
                 var intent = new Intent(this, typeof(AddAccount));

@@ -200,9 +200,7 @@ namespace Transact
         }
 
         public async Task<bool> addTransaction(int accountPK, DateTime date, string title, decimal amount, string category, string type_toaccount, string notes){
-            createDatabase();
-            createAccountTable();
-            createTransactionTable();
+            initializeDatabase();
 			Console.WriteLine("Start: AddTransaction");
 
             // create a connection string for the database
@@ -214,7 +212,7 @@ namespace Transact
 					await conn.OpenAsync();
 					using (var command = conn.CreateCommand())
 					{
-                        command.CommandText = "INSERT INTO " + transactionTableName + " (AccountPK, Date, Title, Amount, Category, Type_ToAccount, Notes) VALUES (@accountPK, @date, @title, @amount, @category, @type_toaccount, @notes)";
+                        command.CommandText = "INSERT INTO " + transactionTableName + " (AccountPK, Date, Title, Amount, Category, Type_ToAccount, Notes) VALUES (@accountPK, @date, @title, @amount, @category, @type_toaccount, @notes); SELECT last_insert_rowid();";
                         command.Parameters.Add("@accountPK", DbType.Int32).Value = accountPK;
                         command.Parameters.Add("@date", DbType.Date).Value = date;
                         command.Parameters.Add("@title", DbType.String).Value = title;
@@ -223,7 +221,9 @@ namespace Transact
                         command.Parameters.Add("@type_toaccount", DbType.String).Value = type_toaccount;
                         command.Parameters.Add("@notes", DbType.String).Value = notes;
                         command.CommandType = CommandType.Text;
-						await command.ExecuteNonQueryAsync();
+						var pk = command.ExecuteScalar();
+
+                        Transactions.transactons.Add(new Transaction() { PK = Convert.ToInt32(pk), AccountPK = accountPK, Date = date, Title = title, Amount = amount, Category = category, Type_ToAccount = type_toaccount, Notes = notes });
 
 						Console.WriteLine("The record was inserted successfully");
 					}
@@ -255,9 +255,10 @@ namespace Transact
                         command.CommandType = CommandType.Text;
 						var r = command.ExecuteReader();
 						Console.WriteLine("Reading data");
-						while (r.Read())
-							Console.WriteLine("PK={0}; AccountPK={1}, Date={2}; Title={3}; Amount={4}; Category={5}; Type_ToAccount={6}; Notes={7};",
-											  r["PK"].ToString(),
+                        while (r.Read())
+                        {
+                            Console.WriteLine("PK={0}; AccountPK={1}, Date={2}; Title={3}; Amount={4}; Category={5}; Type_ToAccount={6}; Notes={7};",
+                                              r["PK"].ToString(),
                                               r["AccountPK"].ToString(),
                                               r["Date"].ToString(),
                                               r["Title"].ToString(),
@@ -266,6 +267,8 @@ namespace Transact
                                               r["Type_ToAccount"].ToString(),
                                               r["Notes"].ToString());
 
+                            Transactions.transactons.Add(new Transaction() { PK = Convert.ToInt32(r["PK"].ToString()), AccountPK = Convert.ToInt32(r["AccountPK"].ToString()), Date = Convert.ToDateTime(r["Date"].ToString()), Title = r["Title"].ToString(), Amount = Convert.ToDecimal(r["Amount"].ToString()), Category = r["Category"].ToString(), Type_ToAccount = r["Type_ToAccount"].ToString(), Notes = r["Notes"].ToString() });
+                        }
 						Console.WriteLine("The records were read successfully");
 					}
                     conn.Close();
