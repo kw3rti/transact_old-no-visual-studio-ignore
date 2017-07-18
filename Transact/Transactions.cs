@@ -7,10 +7,10 @@ using Android.Widget;
 
 namespace Transact
 {
-    [Activity(Label = "@string/enter_activity")]
+    [Activity(Label = "@string/enter_activity", Icon = "@mipmap/icon")]
     public class Transactions : Activity
     {
-		public static List<Transaction> transactons = new List<Transaction>();
+        public static List<Transaction> transactons;
 		public static ListView lstTransactions;
 		public static TransactionListViewAdapter transactionAdapter;
 
@@ -23,13 +23,15 @@ namespace Transact
 
             var accountPK = Intent.GetIntExtra("AccountPK",0);
 
+            transactons = new List<Transaction>();
+
             MainActivity.db.readTransactionRecords(accountPK);
 
             // Get our button from the layout resource and attach an event to it
             Button addTransaction = FindViewById<Button>(Resource.Id.btnAddTransaction1);
             lstTransactions = FindViewById<ListView>(Resource.Id.lstTransactions);
 
-			transactionAdapter = new TransactionListViewAdapter(this, transactons);
+            transactionAdapter = new TransactionListViewAdapter(this, transactons);
 			lstTransactions.Adapter = transactionAdapter;
 
 			//click events for short and long of the listview for the accounts

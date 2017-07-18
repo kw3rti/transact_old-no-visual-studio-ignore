@@ -39,31 +39,37 @@ namespace Transact
 
             if(row == null)
             {
-                row = LayoutInflater.From(mContext).Inflate(Resource.Layout.listView_accounts, null, false);
+                row = LayoutInflater.From(mContext).Inflate(Resource.Layout.listView_transactions, null, false);
             }
 
             TextView txtTransactionDate = row.FindViewById<TextView>(Resource.Id.txtTransactionDate);
-            txtTransactionDate.Text = mItems[position].Date.ToString();
+            var date = mItems[position].Date.ToString("yyyy-MM-dd");
 
-            //TextView txtAccountNote = row.FindViewById<TextView>(Resource.Id.txtAccountNote);
-            //txtAccountNote.Text = mItems[position].Note;
+            txtTransactionDate.Text = date;
 
-            //TextView txtAccountTotal = row.FindViewById<TextView>(Resource.Id.txtAccountBalance);
+            TextView txtTransactionName = row.FindViewById<TextView>(Resource.Id.txtTransactionName);
+            txtTransactionName.Text = mItems[position].Title;
+
+            TextView txtTransactionCategory = row.FindViewById<TextView>(Resource.Id.txtTransactionCategory);
+            txtTransactionCategory.Text = mItems[position].Category;
+
+            TextView txtTransactionAmount = row.FindViewById<TextView>(Resource.Id.txtTransactionAmount);
+            //txtTransactionAmount.Text = mItems[position].Amount.ToString();
 
             //if balanace is 0, text color is black; if balance is greater than 0, text color is green; if balance is less than 0, text color is red
-            //if(mItems[position].Balance == 0)
-            //{
-                //txtAccountTotal.SetTextColor(Color.Black);
-            //}
-            //else if(mItems[position].Balance > 0)
-            //{
-                //txtAccountTotal.SetTextColor(Color.DarkGreen);
-            //}
-            //else
-            //{
-                //txtAccountTotal.SetTextColor(Color.Red);
-            //}
-            //txtAccountTotal.Text = "$" + mItems[position].Balance;
+            if(mItems[position].Amount == 0)
+            {
+                txtTransactionAmount.SetTextColor(Color.Black);
+            }
+            else if(mItems[position].Amount > 0)
+            {
+                txtTransactionAmount.SetTextColor(Color.DarkGreen);
+            }
+            else
+            {
+                txtTransactionAmount.SetTextColor(Color.Red);
+            }
+            txtTransactionAmount.Text = "$" + mItems[position].Amount;
 
             return row;
         }

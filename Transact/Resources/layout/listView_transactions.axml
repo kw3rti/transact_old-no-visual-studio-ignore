@@ -28,7 +28,6 @@
             android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#009657"
             android:textSize="15dp" />
         <TextView
             android:id="@+id/txtTransactionCategory"

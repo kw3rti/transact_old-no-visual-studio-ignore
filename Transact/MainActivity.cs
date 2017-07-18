@@ -1,8 +1,6 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using System.IO;
-using System;
 using Android.Content;
 using System.Collections.Generic;
 
@@ -13,7 +11,7 @@ namespace Transact
     {
 		//initalize database and account list
 		public static Database db = new Database();
-        public static List<Account> accounts = new List<Account>();
+        public static List<Account> accounts;
         public static ListView lstAccounts;
         public static AccountListViewAdapter accountAdapter;
 
@@ -30,7 +28,7 @@ namespace Transact
             Button btnAddAccount = FindViewById<Button>(Resource.Id.btnAddAccount);
 
             db = new Database();
-
+            accounts = new List<Account>();
             //load accounts from the database
             db.readAccounts();
 
@@ -47,15 +45,11 @@ namespace Transact
 
             btnAddAccount.Click += delegate {
                 var intent = new Intent(this, typeof(AddAccount));
-                //intent.PutExtra("db_class", db);
-                //intent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
                 StartActivity(intent);
             };
         }
-
         private void LstAccounts_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            //makeToast(accounts[e.Position].Name + " was clicked!");
             var intent = new Intent(this, typeof(Transactions));
             intent.PutExtra("AccountPK", accounts[e.Position].PK);
 			StartActivity(intent);

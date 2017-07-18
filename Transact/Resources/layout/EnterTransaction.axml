@@ -15,7 +15,7 @@
         android:id="@+id/linearLayout2"
         android:weightSum="100">
         <EditText
-            android:inputType="numberDecimal"
+            android:inputType="numberDecimal|numberSigned"
             android:id="@+id/txtAmount"
             android:hint="@string/hint_amount"
             android:layout_width="match_parent"

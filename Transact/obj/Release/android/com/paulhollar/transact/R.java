@@ -21,9 +21,9 @@ public final class R {
         public static final int btnAddAccount=0x7f06001b;
         public static final int btnAddTransaction=0x7f060010;
         public static final int btnAddTransaction1=0x7f06001d;
-        public static final int btnBillReminder=0x7f060019;
+        public static final int btnBillReminder=0x7f06001a;
         public static final int btnCancelTransaction=0x7f06000f;
-        public static final int btnReadRecords=0x7f06001a;
+        public static final int layoutMenu1=0x7f060019;
         public static final int linearLayout1=0x7f060004;
         public static final int linearLayout2=0x7f060008;
         public static final int linearLayout3=0x7f06000e;

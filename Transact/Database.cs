@@ -14,6 +14,7 @@ namespace Transact
         //database name
         private static string databaseName = "transact.db";
 
+        //table names
         private string accountTableName = "tblAccounts";
         private string transactionTableName = "tblTransactions";
         
@@ -224,7 +225,7 @@ namespace Transact
 						var pk = command.ExecuteScalar();
 
                         Transactions.transactons.Add(new Transaction() { PK = Convert.ToInt32(pk), AccountPK = accountPK, Date = date, Title = title, Amount = amount, Category = category, Type_ToAccount = type_toaccount, Notes = notes });
-
+                        await readAccounts();
 						Console.WriteLine("The record was inserted successfully");
 					}
                     conn.Close();
@@ -285,8 +286,10 @@ namespace Transact
 		public async Task readAccounts()
 		{
 			Console.WriteLine("Start: ReadAccounts");
-			// create a connection string for the database
-			var connectionString = string.Format("Data Source={0};Version=3;", pathToDatabase);
+            //MainActivity.accounts = new System.Collections.Generic.List<Account>();
+            //MainActivity.lstAccounts = FindViewById<Android.Widget.ListView>(Resource.Id.lstAccounts);
+            // create a connection string for the database
+            var connectionString = string.Format("Data Source={0};Version=3;", pathToDatabase);
             decimal sum = 0;
 			try
 			{
@@ -315,8 +318,8 @@ namespace Transact
                                 sum = Convert.ToDecimal(command2.ExecuteScalar());
                             }
 
-                            MainActivity.accounts.Add(new Account() { PK = Convert.ToInt32(r["PK"]), Name = r["Name"].ToString(), Type = r["Type"].ToString(), Note = r["Note"].ToString(), Balance = sum });                      
-
+                            MainActivity.accounts.Add(new Account() { PK = Convert.ToInt32(r["PK"]), Name = r["Name"].ToString(), Type = r["Type"].ToString(), Note = r["Note"].ToString(), Balance = sum });
+                            //MainActivity.lstAccounts.Adapter = MainActivity.accountAdapter;
                         }
 						Console.WriteLine("The records were read successfully");
 					}

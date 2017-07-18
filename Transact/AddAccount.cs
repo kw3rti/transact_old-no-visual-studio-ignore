@@ -5,7 +5,7 @@ using Android.Widget;
 
 namespace Transact
 {
-    [Activity(Label = "@string/add_account")]
+    [Activity(Label = "@string/add_account", Icon = "@mipmap/icon")]
     public class AddAccount : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

@@ -6,7 +6,7 @@ using Android.Widget;
 
 namespace Transact
 {
-    [Activity(Label = "@string/enter_activity")]
+    [Activity(Label = "@string/enter_activity", Icon = "@mipmap/icon")]
     public class EnterTransaction : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -16,13 +16,12 @@ namespace Transact
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.EnterTransaction);
 
+            //get account pk that is passed from transaction screen
             var accountPK = Intent.GetIntExtra("AccountPK",0);
-			//Database db = (Database)passedIntent.getSerializableExtra("db_class");
 
-            // Get our button from the layout resource and attach an event to it
+            // Get our controls from the layout resource
             Button insertButton = FindViewById<Button>(Resource.Id.btnAddTransaction);
             Button cancelButton = FindViewById<Button>(Resource.Id.btnCancelTransaction);
-
             EditText title = FindViewById<EditText>(Resource.Id.txtTitle);
             EditText amount = FindViewById<EditText>(Resource.Id.txtAmount);
             EditText date = FindViewById<EditText>(Resource.Id.txtDate);
@@ -39,9 +38,10 @@ namespace Transact
             //ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, categories);
             //test.Adapter = adapter;
 
+            //insert button click event (code runs when button on form is clicked)
             insertButton.Click += delegate {
                 enterTransaction(accountPK, date, title, amount, category, type_toaccount, notes);
-                this.Finish();
+                this.Finish();  //close view when finished entering transaction
             };
             cancelButton.Click += delegate { this.Finish(); };
         }
